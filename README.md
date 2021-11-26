@@ -1,3 +1,4 @@
+![](./Filebus.png)
 # Filebus
 
 > A simply upload fileserver for fun
