@@ -37,6 +37,7 @@ func main() {
 		BodyLimit: 1024 * 1024 * 1024 * 1024, // Limit to 1TB
 	})
 
+	app.Get("/delete/*", handle_delete)
 	app.Post("/upload", handle_upload)
 	app.Static("/", "/data")
 

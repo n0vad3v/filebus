@@ -49,6 +49,16 @@ import os
 ...
 ```
 
+### Delete file
+
+```
+➜  curl http://localhost:3000/delete/path/to/main.py
+{"message":"File deleted successfully"}
+
+➜  curl http://localhost:3000/delete/path/to/main.py
+{"remove /data/path/to/main.py: no such file or directory":"remove /data/path/to/main.py: no such file or directory"}
+```
+
 ## Deployment
 
 ### Without DB
@@ -84,6 +94,12 @@ CREATE TABLE upload_logs (
     filehash varchar(255),
     uploader_ip varchar(255),
     uploaded_at DATETIME
+);
+CREATE TABLE delete_logs (
+    filename varchar(255),
+    filepath varchar(255),
+    deleter_ip varchar(255),
+    deleted_at DATETIME
 );
 ```
 
