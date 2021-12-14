@@ -56,7 +56,7 @@ import os
 {"message":"File deleted successfully"}
 
 ➜  curl http://localhost:3000/delete/path/to/main.py
-{"remove /data/path/to/main.py: no such file or directory":"remove /data/path/to/main.py: no such file or directory"}
+{"Error":"remove /data/path/to/main.py: no such file or directory"}
 ```
 
 ## Deployment
