@@ -33,7 +33,7 @@ func handle_delete(c *fiber.Ctx) error {
 	fileNameWithPath := "/data/" + c.Params("*")
 	err := os.Remove(fileNameWithPath)
 	if err != nil {
-		return c.Status(500).JSON(fiber.Map{err.Error(): err.Error()})
+		return c.Status(500).JSON(fiber.Map{"Error": err.Error()})
 	}
 	if loggingToDB == true {
 		logDeleteRequestToDB(db, c.Params("*"), fileNameWithPath, c.IP())
